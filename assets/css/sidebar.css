@@ -1,0 +1,54 @@
+nav .router-link-active {
+  position: relative;
+}
+
+nav .router-link-active::before {
+  -webkit-animation: active-menu-wave-animation .3s ease-in-out .33333s;
+  animation: active-menu-wave-animation .3s ease-in-out .33333s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.33333s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: active-menu-wave-animation;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  content: "";
+  height: 80px;
+  margin-bottom: auto;
+  margin-right: -40px;
+  margin-top: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+.dark nav .router-link-active::before {
+  background-image: url(../svg/sidebar-active-wave-dark.svg);
+}
+
+.light nav .router-link-active::before {
+  background-image: url(../svg/sidebar-active-wave.svg);
+}
+
+@-webkit-keyframes active-menu-wave-animation {
+  to {
+    margin-right: -30.1px;
+    opacity: 1
+  }
+}
+
+@keyframes active-menu-wave-animation {
+  to {
+    margin-right: -30.1px;
+    opacity: 1
+  }
+}
